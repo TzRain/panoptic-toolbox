@@ -8,8 +8,8 @@
 # 
 
 datasetName=${1-sampleData}
-numVGAViews=${2-1} #Specify the number of vga views you want to donwload. Up to 480
-numHDViews=${3-31} #Specify the number of hd views you want to donwload. Up to 31
+numVGAViews=${2-0} #Specify the number of vga views you want to donwload. Up to 480
+numHDViews=${3-15} #Specify the number of hd views you want to donwload. Up to 31
 
 # Select wget or curl, with appropriate options
 if command -v wget >/dev/null 2>&1; then 
@@ -25,7 +25,7 @@ else
 fi
 
 # Each sequence gets its own subdirectory
-mkdir $datasetName		
+mkdir $datasetName
 cd $datasetName
 
 
@@ -55,7 +55,7 @@ cd $datasetName
 mkdir -p hdVideos
 panel=0
 # nodes=(0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30)
-nodes=(0 21 17 4 19 5)
+nodes=(1 2 3 4 6 7 10 12 13 16 18 19 22 23 30)
 for (( c=0; c<$numHDViews; c++))
 do
   fileName=$(printf "hdVideos/hd_%02d_%02d.mp4" ${panel} ${nodes[c]})

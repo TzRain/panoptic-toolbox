@@ -4,7 +4,7 @@
 
 curPath=$(dirname "$0")
 vgaVideoNum=0
-hdVideoNum=5
+hdVideoNum=15
 
 # $curPath/getData.sh 160224_haggling1 $vgaVideoNum $hdVideoNum
 # $curPath/getData.sh 160226_haggling1 $vgaVideoNum $hdVideoNum
